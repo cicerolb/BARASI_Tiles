@@ -22,6 +22,11 @@ public class GridGeneratorEditor : Editor
         {
             gridGenerator.AssignMaterial();
         }
+
+        if (GUILayout.Button("Assign Tile Script"))
+        {
+            gridGenerator.AssignTileScript();
+        }
     }
 
     [MenuItem("Tools/Generate Grid")]
@@ -58,6 +63,20 @@ public class GridGeneratorEditor : Editor
         if (gridGenerator != null)
         {
             gridGenerator.AssignMaterial();
+        }
+        else
+        {
+            Debug.LogError("No Grid Generator Found");
+        }
+    }
+
+    [MenuItem("Tools/Grid/Generate Grid")]
+    public static void AssignTileScript()
+    {
+        GridGenerator gridGenerator = FindAnyObjectByType<GridGenerator>();
+        if (gridGenerator != null)
+        {
+            gridGenerator.AssignTileScript();
         }
         else
         {

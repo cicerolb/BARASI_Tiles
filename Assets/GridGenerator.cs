@@ -58,4 +58,13 @@ public class GridGenerator : MonoBehaviour
                 
         
     }
+
+    public void AssignTileScript()
+    {
+        GameObject[] tiles = GameObject.FindGameObjectsWithTag("Tile");
+        foreach (GameObject tile in tiles)
+        {
+            tile.AddComponent<Tile>();
+        }
+    }
 }
