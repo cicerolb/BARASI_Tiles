@@ -9,6 +9,7 @@ public class AIMove : MonoBehaviour
     public int move = 5;
     public float jumpHeight = 2;
     public float moveSpeed;
+    Tile currentTile;
 
     Vector3 velocity = new();
     Vector3 heading = new();
@@ -24,7 +25,7 @@ public class AIMove : MonoBehaviour
     public void GetCurrentTile()
     {
         currentTile = GetTargetTile(gameObject);
-        GetCurrentTile().current = true;
+        currentTile.current = true;
 
     }
     
